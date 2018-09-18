@@ -106,7 +106,7 @@ def problem3(point, length, delta, window):
 
 
     # --------------------------------------------------------------------------
-    # TO: 2. Implement and test this function.
+    # TO: 2. Implement and test this function
     # TO (continued):  IMPORTANT: Use this ITERATIVE ENHANCEMENT PLAN:
     # TO (continued):    1. Make the sole VERTICAL line appear,
     # TO (continued):         with thickness 3.
