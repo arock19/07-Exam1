@@ -2,8 +2,8 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Achintya Gupta.
+"""  # TO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -88,8 +88,16 @@ def problem1a(rectangle, square, thickness, window):
       :type thickness: int
       :type window:    rg.RoseWindow
     """
+    rectangle.attach_to(window)
+    square.attach_to(window)
+    line=rg.Line(square.center,rg.Point(rectangle.get_upper_left_corner().x+rectangle.get_width()/2,rectangle.get_upper_left_corner().y))
+    line.thickness=thickness
+    line.color=rectangle.outline_color
+    line.attach_to(window)
+    window.render()
+
     # --------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # TO: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
 
@@ -148,8 +156,13 @@ def problem1b(point, win, width, height, color):
       :type height: int
       :type color:  str
     """
+    ellipse=rg.Ellipse(rg.Point(point.x-width/2,point.y),rg.Point(point.x+width/2,point.y+height))
+    ellipse.fill_color=color
+    ellipse.attach_to(win)
+    win.render()
+
     # --------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # TO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
 
