@@ -2,8 +2,8 @@
 Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Achintya Gupta.
+"""  # TO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -87,19 +87,37 @@ def problem3(point, length, delta, window):
       :type delta:   int
       :type window:  rg.RoseWindow
     """
+    l1=rg.Line(point,rg.Point(point.x,point.y+length))
+    l1.thickness=3
+    l1.color='black'
+    l1.attach_to(window)
+    window.render(0.1)
+    for k in range((length//delta)+1):
+        line=rg.Line(rg.Point(point.x,point.y+delta*k),rg.Point(point.x+length+20*k,point.y+delta*k))
+        line.thickness=3
+        if (k+3)%3==0:
+            line.color='magenta'
+        elif (k+2)%3==0:
+            line.color='cyan'
+        else:
+            line.color='spring green'
+        line.attach_to(window)
+        window.render(0.1)
+
+
     # --------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
-    # TODO (continued):  IMPORTANT: Use this ITERATIVE ENHANCEMENT PLAN:
-    # TODO (continued):    1. Make the sole VERTICAL line appear,
-    # TODO (continued):         with thickness 3.
-    # TODO (continued):    2. Make the FIRST horizontal line appear.
-    # TODO (continued):    3. Make MORE horizontal lines appear,
-    # TODO (continued):         each delta below the previous one.
-    # TODO (continued):    4. Make each successive horizontal line
-    # TODO (continued):         20 pixels longer than the previous one.
-    # TODO (continued):    5. Make the right NUMBER of horizontal lines.
-    # TODO (continued):    6. Make the horizontal lines each have thickness 3
-    # TODO (continued):         and colors per the specified pattern.
+    # TO: 2. Implement and test this function.
+    # TO (continued):  IMPORTANT: Use this ITERATIVE ENHANCEMENT PLAN:
+    # TO (continued):    1. Make the sole VERTICAL line appear,
+    # TO (continued):         with thickness 3.
+    # TO (continued):    2. Make the FIRST horizontal line appear.
+    # TO (continued):    3. Make MORE horizontal lines appear,
+    # TO (continued):         each delta below the previous one.
+    # TO (continued):    4. Make each successive horizontal line
+    # TO (continued):         20 pixels longer than the previous one.
+    # TO (continued):    5. Make the right NUMBER of horizontal lines.
+    # TO (continued):    6. Make the horizontal lines each have thickness 3
+    # TO (continued):         and colors per the specified pattern.
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
 
